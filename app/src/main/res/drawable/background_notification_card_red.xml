@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="@dimen/background_notification_card_left_line_width">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/color_notification_label_red"/>
+            <corners
+                android:bottomLeftRadius="@dimen/corner_radius_card"
+                android:bottomRightRadius="@dimen/corner_radius_card"
+                android:topLeftRadius="@dimen/corner_radius_card"
+                android:topRightRadius="@dimen/corner_radius_card"/>
+        </shape>
+    </item>
+    <item android:left="8dp">
+        <shape android:shape="rectangle">
+            <solid
+                android:color="@android:color/white"/>
+            <corners
+                android:bottomRightRadius="@dimen/corner_radius_card"
+                android:topRightRadius="@dimen/corner_radius_card"/>
+        </shape>
+    </item>
+</layer-list>

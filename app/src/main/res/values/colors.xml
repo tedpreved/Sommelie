@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#191919</color>
+    <color name="colorAccent">#AAAAAA</color>
+    <color name="color_error_red">#d50000</color>
+    <color name="btn_green_background">#827717</color>
+    <color name="color_notification_listview_background">#ff8f00</color>
+    <color name="color_in_stock_top_background_">#453e3e</color>
+    <color name="color_listview_selected_color">#453e3e</color>
+    <color name="color_right_container_top_background">#00695c</color>
+    <color name="color_notification_label_red">#ff0000</color>
+    <color name="color_notification_label_green">#91981a</color>
+    <color name="color_divider">#d7d7d7</color>
+    <color name="color_shape_small">#f2f2f2</color>
+    <color name="color_outgo_red">#cf3106</color>
+    <color name="color_green_btn_pressed">#5e560d</color>
+    <color name="divider_color">#AAAAAA</color>
+
+</resources>

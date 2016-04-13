@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_wood">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_toEndOf="@+id/activity_home_list_view_menu"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/activity_home_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_home_list_view_menu_width"
+                android:text="@string/activity_home_tv_title"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/activity_home_tv_title_text_size"/>
+
+            <Button
+                android:id="@+id/activity_home_btn_add_new_wine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_button_green"
+                android:drawableLeft="@drawable/plus_icon1"
+                android:drawablePadding="@dimen/activity_home_btn_add_new_wine_padding_drawable"
+                android:paddingLeft="@dimen/activity_home_btn_add_new_wine_padding_left"
+                android:paddingRight="@dimen/activity_home_btn_add_new_wine_padding_right"
+                android:text="@string/activity_home_btn_add_new_wine"
+                android:textAllCaps="true"
+                android:textSize="@dimen/activity_home_btn_add_new_wine_text_size"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/activity_home_list_view_menu"
+        android:layout_width="@dimen/activity_home_list_view_menu_width"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_menu"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:listSelector="@drawable/menu_selector"
+        tools:listitem="@layout/item_menu_listview"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="@dimen/activity_home_container_wine_available_margin_left"
+        android:layout_marginTop="@dimen/activity_home_container_wine_available_margin_top"
+        android:layout_toEndOf="@id/activity_home_list_view_menu"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container_wine_available"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_home_container_wine_available_height"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewHeader"
+                    android:background="@drawable/bg_home_tv_wine_avaliable"
+                    android:text="@string/activity_home_label_wine_avaible"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_wine_in_stock_container">
+
+                    <View
+                        android:id="@+id/activity_home_vertical_divider"
+                        android:layout_width="2dp"
+                        android:layout_height="70dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/color_divider"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_home_container_wine_available_tv_bottle_count_margin_end"
+                        android:layout_toLeftOf="@+id/activity_home_vertical_divider"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/activity_home_tv_bottle_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 019"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/activity_home_tv_bottle_count_text_size"/>
+
+                        <TextView
+                            android:id="@+id/tv_all_bottle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="всего бутылок"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tv_all_bottle_text_size"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/activity_home_img_box"
+                        android:layout_width="@dimen/img_ic_box_size"
+                        android:layout_height="@dimen/img_ic_box_size"
+                        android:layout_alignTop="@id/activity_home_vertical_divider"
+                        android:layout_marginLeft="@dimen/img_box_margin_left"
+                        android:layout_toRightOf="@+id/activity_home_vertical_divider"
+                        android:src="@drawable/ic_box"/>
+
+                    <TextView
+                        android:id="@+id/activity_home_tv_box_count"
+                        android:layout_width="@dimen/tv_bottle_count_small_width"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/activity_home_img_box"
+                        android:layout_marginStart="@dimen/activity_home_tv_box_count_margin_start"
+                        android:layout_toEndOf="@+id/activity_home_img_box"
+                        android:gravity="center"
+                        android:text="24"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/tv_count_bottle_small_text_size"/>
+
+                    <ImageView
+                        android:id="@+id/activity_home_img_icon_bottle"
+                        android:layout_width="@dimen/acivity_home_icon_bottle_size"
+                        android:layout_height="@dimen/acivity_home_icon_bottle_size"
+                        android:layout_alignBottom="@id/activity_home_vertical_divider"
+                        android:layout_marginLeft="@dimen/img_box_margin_left"
+                        android:layout_toRightOf="@+id/activity_home_vertical_divider"
+                        android:src="@drawable/ic_bottle_dark"/>
+
+                    <TextView
+                        android:id="@+id/activity_home_tv_count_bottle_small"
+                        android:layout_width="@dimen/tv_bottle_count_small_width"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/activity_home_img_icon_bottle"
+                        android:layout_alignStart="@+id/activity_home_tv_box_count"
+                        android:gravity="bottom"
+                        android:text="3 853"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/tv_count_bottle_small_text_size"/>
+
+                    <View
+                        android:id="@+id/activity_home_divider_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_above="@id/activity_home_tv_count_bottle_small"
+                        android:layout_alignEnd="@id/activity_home_tv_count_bottle_small"
+                        android:layout_alignStart="@id/activity_home_tv_count_bottle_small"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/color_divider"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/activity_home_container_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/activity_home_container_notification_padding_bottom"
+                android:layout_marginTop="@dimen/activity_home_container_notification_padding_top"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewHeader"
+                    android:background="@drawable/bg_home_tv_notification"
+                    android:text="@string/activity_home_label_notification"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_home_rv_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_wine_in_stock_container"
+                    android:paddingEnd="@dimen/activity_home_rv_notifications_padding_end"
+                    android:paddingStart="@dimen/activity_home_rv_notifications_padding_start"
+                    android:paddingTop="@dimen/activity_home_rv_notifications_padding_top"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/activity_home_income_outgo_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_home_income_outgo_container_padding_bottom"
+            android:layout_marginLeft="@dimen/activity_home_income_outgo_container_padding_left"
+            android:layout_marginRight="@dimen/activity_home_income_outgo_container_padding_right"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_home_ll_incame_uncame"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewHeader"
+                    android:layout_weight="1"
+                    android:text="@string/activity_home_label_wine_income"/>
+
+                <TextView
+                    style="@style/TextViewHeader"
+                    android:layout_weight="1"
+                    android:text="@string/activity_home_label_outgo"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_rv_income"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_wine_in_stock_container"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

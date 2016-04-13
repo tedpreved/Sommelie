@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_login_rl_main_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wood"
+    tools:context=".ui.login.LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="@dimen/activity_login_sign_in_container_width"
+        android:layout_height="@dimen/activity_login_sign_in_container_height"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_login_shape"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/activity_login_tv_wine_cellar_padding_top"
+            android:text="@string/activity_login_tv_wine_cellar"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"/>
+
+        <EditText
+            android:id="@+id/activity_login_et_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_login_et_login_margin_left"
+            android:layout_marginRight="@dimen/activity_login_et_login_margin_right"
+            android:layout_marginTop="@dimen/activity_login_et_login_margin_top"
+            android:hint="@string/activity_login_et_login_hint"
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/activity_login_input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_login_et_login"
+            android:layout_marginLeft="@dimen/activity_login_et_login_margin_left"
+            android:layout_marginRight="@dimen/activity_login_et_login_margin_right"
+            android:layout_marginTop="@dimen/activity_login_input_layout_password_margin_top">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/activity_password_et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_login_et_password_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@android:color/black"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/activity_login_btn_sign_in"
+            android:layout_width="@dimen/activity_home_btn_sign_in_width"
+            android:layout_height="@dimen/activity_home_btn_sign_in_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_login_btn_sign_in_margin_bottom"
+            android:background="@drawable/selector_button_green"
+            android:text="@string/activity_login_btn_sign_in"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/activity_login_btn_sign_in_text_size"/>
+    </RelativeLayout>
+
+</RelativeLayout>

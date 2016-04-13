@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">"Sommelier "</string>
+    <string name="activity_home_label_notification">Напоминания</string>
+    <string name="activity_login_tv_wine_cellar">Винный погреб</string>
+    <string name="activity_login_btn_sign_in">Начать работу</string>
+    <string name="activity_home_label_wine_avaible">Вино в наличии</string>
+    <string name="activity_home_label_wine_income">Приход</string>
+    <string name="activity_home_label_outgo">Расход</string>
+    <string name="activity_home_btn_add_new_wine">Добавить новое вино</string>
+    <string name="activity_home_tv_title">Дашбоард</string>
+    <string name="activity_login_et_login_hint">пользователь</string>
+    <string name="activity_login_et_password_hint">пароль</string>
+
+    <string-array name="left_menu_names">
+        <item>Дашбоард</item>
+        <item>Вино</item>
+        <item>Навигация</item>
+        <item>Напоминания</item>
+        <item>Статистика</item>
+        <item>Новости</item>
+    </string-array>
+
+    <array name="left_menu_icons">
+        <item>@drawable/ic_menu_dashboard</item>
+        <item>@drawable/ic_menu_bottle</item>
+        <item>@drawable/ic_menu_navigation</item>
+        <item>@drawable/ic_menu_notification</item>
+        <item>@drawable/ic_menu_statistic</item>
+        <item>@drawable/ic_menu_news</item>
+    </array>
+</resources>
